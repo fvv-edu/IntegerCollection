@@ -80,6 +80,25 @@ public class MyCollection {
         return elementData[index];
     }
 
+    // Поиск индекса по элементу
+    int indexOf(Integer o) {
+        Integer[] es = elementData;
+        if (o == null) {
+            for (int i = 0; i < size; i++) {
+                if (es[i] == null) {
+                    return i;
+                }
+            }
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (o.equals(es[i])) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
     private void increase(Integer o) {
         int i;
         for (i = 0; i < size; i++) {
@@ -143,17 +162,6 @@ public class MyCollection {
         return oldValue;
     }
 
-    //Найти минимальное значение
-    public Integer findMinValue() {
-        int min = elementData[0];
-        for (int i = 0; i < size; i++) {
-            if (elementData[i] < min) {
-                min = elementData[i];
-            }
-        }
-        return min;
-    }
-
     //Найти максимальное значение
     public Integer findMaxValue() {
         int max = elementData[0];
@@ -163,6 +171,17 @@ public class MyCollection {
             }
         }
         return max;
+    }
+
+    //Найти минимальное значение
+    public Integer findMinValue() {
+        int min = elementData[0];
+        for (int i = 0; i < size; i++) {
+            if (elementData[i] < min) {
+                min = elementData[i];
+            }
+        }
+        return min;
     }
 
     public int size() {
@@ -182,24 +201,7 @@ public class MyCollection {
         return (double) sum() / size;
     }
 
-    // Поиск индекса по элементу
-    int indexOf(Integer o) {
-        Integer[] es = elementData;
-        if (o == null) {
-            for (int i = 0; i < size; i++) {
-                if (es[i] == null) {
-                    return i;
-                }
-            }
-        } else {
-            for (int i = 0; i < size; i++) {
-                if (o.equals(es[i])) {
-                    return i;
-                }
-            }
-        }
-        return -1;
-    }
+
 }
 
 
