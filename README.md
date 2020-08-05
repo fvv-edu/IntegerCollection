@@ -15,7 +15,7 @@
  * недопустим ввод в коллекцию null, символов и других значений, кроме целых чисел.
 
 ## Описание класса 
-Класс - MyCollection  
+Класс - IntegerCollection  
 
 добавление элемента  
 **public boolean add(Integer o)**  
@@ -53,9 +53,9 @@
 
 ## Инструкция по запуску 
 
-1) Перейти в репозиторий по ссылке https://github.com/fvv-edu/MyCollection  
+1) Перейти в репозиторий по ссылке https://github.com/fvv-edu/IntegerCollection  
 2) Кликнуть зеленую кнопку "Code"
 3) Кликнуть Download ZIP
 4) Распаковать архиватором
 5) Открыть проект в IDE
-6) Запустить класс MyCollectionRunner
+6) Запустить класс IntegerCollectionRunner

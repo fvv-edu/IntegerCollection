@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class MyCollection {
+public class IntegerCollection {
 
     private int size;
     transient Integer[] elementData;
@@ -10,7 +10,7 @@ public class MyCollection {
     private static final Integer[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
     private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
-    public MyCollection() {
+    public IntegerCollection() {
         this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
     }
 
@@ -54,7 +54,6 @@ public class MyCollection {
         elementData = Arrays.copyOf(elementData, newCapacity);
     }
 
-    // Добавление элемента
     public boolean add(Integer o) {
         if (o == null) {
             return false;
@@ -200,7 +199,6 @@ public class MyCollection {
     public double average() {
         return (double) sum() / size;
     }
-
 
 }
 
